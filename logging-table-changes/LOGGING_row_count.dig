@@ -3,7 +3,12 @@ _export:
     database: information_schema
     # Update to include the databases you want to monitor
     table_schemas: "'database1','database2'"
-    
+
++create_result_table:
+  td_ddl>:
+  create_tables: [row_count_by_table]
+  database: metadata
+
 +generate_queries:
   engine: presto
   td>: LOGGING_generate_row_count_queries.sql
