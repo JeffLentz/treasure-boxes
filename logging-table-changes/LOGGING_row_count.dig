@@ -11,5 +11,5 @@ _export:
 
 +run_queries:
   engine: presto
-  td>: LOGGING_run_row_count_queries.sql
-  
+  td>: 
+  query: ${td.last_results.queries}
