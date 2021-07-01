@@ -3,7 +3,12 @@ _export:
     database: information_schema
     # Update to include the names of databases you want to monitor
     table_schemas: "'database1', 'database2'"
-    
+
++create_result_table:
+  td_ddl>:
+  create_tables: [max_time_by_table]
+  database: metadata
+
 +generate_queries:
   engine: presto
   td>: LOGGING_generate_max_time_queries.sql
