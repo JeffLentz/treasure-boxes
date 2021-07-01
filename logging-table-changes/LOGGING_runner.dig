@@ -3,6 +3,11 @@ timezone: America/Chicago
 schedule:
   daily>: 21:00:00
 
++create_metadata_database:
+  td_ddl>:
+  create_databases: [metadata]
+  database: information_schema
+
 +row_count:
   require>: LOGGING_row_count
   ignore_failure: true
