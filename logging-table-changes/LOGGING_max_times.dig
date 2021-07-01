@@ -11,4 +11,5 @@ _export:
 
 +run_queries:
   engine: presto
-  td>: LOGGING_run_max_time_queries.sql
+  td>: 
+  query: ${td.last_results.queries}
