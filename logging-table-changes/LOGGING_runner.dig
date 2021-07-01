@@ -1,0 +1,12 @@
+timezone: America/Chicago
+
+schedule:
+  daily>: 21:00:00
+
++row_count:
+  require>: LOGGING_row_count
+  ignore_failure: true
+
++max_times:
+  require>: LOGGING_max_times
+  ignore_failure: true
