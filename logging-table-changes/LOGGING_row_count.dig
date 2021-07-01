@@ -1,0 +1,15 @@
+_export:
+  td:
+    database: information_schema
+    # Update to include the databases you want to monitor
+    table_schemas: "'database1','database2'"
+    
++generate_queries:
+  engine: presto
+  td>: LOGGING_generate_row_count_queries.sql
+  store_last_results: true
+
++run_queries:
+  engine: presto
+  td>: LOGGING_run_row_count_queries.sql
+  
